@@ -1,0 +1,88 @@
+Cnae:Grupo
+01:Agropecuária,<br>Produção<br>Florestal e<br>Pesca
+02:Agropecuária,<br>Produção<br>Florestal e<br>Pesca
+03:Agropecuária,<br>Produção<br>Florestal e<br>Pesca
+05:Indústrias<br>Extrativas
+06:Indústrias<br>Extrativas
+07:Indústrias<br>Extrativas
+08:Indústrias<br>Extrativas
+09:Indústrias<br>Extrativas
+10:Indústria de<br>Transformação
+11:Indústria de<br>Transformação
+12:Indústria de<br>Transformação
+13:Indústria de<br>Transformação
+14:Indústria de<br>Transformação
+15:Indústria de<br>Transformação
+16:Indústria de<br>Transformação
+17:Indústria de<br>Transformação
+18:Indústria de<br>Transformação
+19:Indústria de<br>Transformação
+20:Indústria de<br>Transformação
+21:Indústria de<br>Transformação
+22:Indústria de<br>Transformação
+23:Indústria de<br>Transformação
+24:Indústria de<br>Transformação
+25:Indústria de<br>Transformação
+26:Indústria de<br>Transformação
+27:Indústria de<br>Transformação
+28:Indústria de<br>Transformação
+29:Indústria de<br>Transformação
+30:Indústria de<br>Transformação
+31:Indústria de<br>Transformação
+32:Indústria de<br>Transformação
+33:Indústria de<br>Transformação
+35:Eletricidade<br>e Gás
+36:Saneamento e<br>Resíduos
+37:Saneamento e<br>Resíduos
+38:Saneamento e<br>Resíduos
+39:Saneamento e<br>Resíduos
+41:Construção
+42:Construção
+43:Construção
+45:Atividades<br>Comerciais
+46:Atividades<br>Comerciais
+47:Atividades<br>Comerciais
+49:Transporte e<br>Armazenagem
+50:Transporte e<br>Armazenagem
+51:Transporte e<br>Armazenagem
+52:Transporte e<br>Armazenagem
+53:Transporte e<br>Armazenagem
+55:Alojamento e<br>Alimentação
+56:Alojamento e<br>Alimentação
+58:Informação e<br>Comunicação
+59:Informação e<br>Comunicação
+60:Informação e<br>Comunicação
+61:Informação e<br>Comunicação
+62:Informação e<br>Comunicação
+63:Informação e<br>Comunicação
+64:Atividades<br>Financeiras e<br>Seguros
+65:Atividades<br>Financeiras e<br>Seguros
+66:Atividades<br>Financeiras e<br>Seguros
+68:Atividades<br>Imobiliárias
+69:Atividades<br>Profissionais e<br>Técnicas
+70:Atividades<br>Profissionais e<br>Técnicas
+71:Atividades<br>Profissionais e<br>Técnicas
+72:Atividades<br>Profissionais e<br>Técnicas
+73:Atividades<br>Profissionais e<br>Técnicas
+74:Atividades<br>Profissionais e<br>Técnicas
+75:Atividades<br>Profissionais e<br>Técnicas
+77:Atividades<br>Administrativas
+78:Atividades<br>Administrativas
+79:Atividades<br>Administrativas
+80:Atividades<br>Administrativas
+81:Atividades<br>Administrativas
+82:Atividades<br>Administrativas
+84:Administração<br>Pública
+85:Educação
+86:Saúde e<br>Serviços<br>Sociais
+87:Saúde e<br>Serviços<br>Sociais
+88:Saúde e<br>Serviços<br>Sociais
+90:Cultura,<br>Esportes e<br>Recreação
+91:Cultura,<br>Esportes e<br>Recreação
+92:Cultura,<br>Esportes e<br>Recreação
+93:Cultura,<br>Esportes e<br>Recreação
+94:Outros<br>Serviços
+95:Outros<br>Serviços
+96:Outros<br>Serviços
+97:Serviços<br>Domésticos
+99:Organismos<br>Internacionais

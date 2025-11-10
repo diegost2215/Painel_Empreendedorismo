@@ -1,0 +1,88 @@
+CNAE:Divisão
+01: Agricultura,<br>pecuária e<br>serviços<br>relacionados
+02: Produção florestal
+03: Pesca e aqüicultura
+05: Extração de carvão<br>mineral
+06: Extração de<br>petróleo e gás<br>natural
+07: Extração de<br>minerais metálicos
+08: Extração de<br>minerais não<br>metálicos
+09: Atividades de<br>apoio à extração<br>de minerais
+10: Fabricação de<br>produtos<br>alimentícios
+11: Fabricação de<br>bebidas
+12: Fabricação de<br>produtos do fumo
+13: Fabricação de<br>produtos têxteis
+14: Confecção de<br>artigos do<br>vestuário e<br>acessórios
+15: Preparação de<br>couros e<br>fabricação de<br>artefatos...
+16: Fabricação de<br>produtos de<br>madeira
+17: Fabricação de<br>celulose, papel e<br>produtos de papel
+18: Impressão e<br>reprodução de<br>gravações
+19: Fabricação de<br>coque, de<br>produtos<br>derivados...
+20: Fabricação de<br>produtos químicos
+21: Fabricação de<br>produtos<br>farmoquímicos e<br>farmacêuticos
+22: Fabricação de<br>produtos de<br>borracha e de<br>material...
+23: Fabricação de<br>produtos de<br>minerais não<br>metálicos
+24: Metalurgia
+25: Fabricação de<br>produtos de<br>metal, exceto<br>máquinas...
+26: Fabricação de<br>equipamentos de<br>informática,<br>produtos...
+27: Fabricação de<br>máquinas,<br>aparelhos e<br>materiais...
+28: Fabricação de<br>máquinas e<br>equipamentos
+29: Fabricação de<br>veículos<br>automotores,<br>reboques...
+30: Fabricação de<br>outros<br>equipamentos de<br>transporte,...
+31: Fabricação de<br>móveis
+32: Fabricação de<br>produtos diversos
+33: Manutenção,<br>reparação e<br>instalação de<br>máquinas...
+35: Eletricidade, gás<br>e outras<br>utilidades
+36: Captação,<br>tratamento e<br>distribuição de<br>água
+37: Esgoto e<br>atividades<br>relacionadas
+38: Coleta, tratamento<br>e disposição de<br>resíduos;<br>recuperação...
+39: Descontaminação e<br>outros serviços<br>de gestão de<br>resíduos
+41: Construção de<br>edifícios
+42: Obras de<br>infraestrutura
+43: Serviços<br>especializados<br>para construção
+45: Comércio e<br>reparação de<br>veículos<br>automotores...
+46: Comércio por<br>atacado, exceto<br>veículos<br>automotores...
+47: Comércio varejista
+49: Transporte<br>terrestre
+50: Transporte<br>aquaviário
+51: Transporte aéreo
+52: Armazenamento e<br>atividades<br>auxiliares dos<br>transportes
+53: Correio e outras<br>atividades de<br>entrega
+55: Alojamento
+56: Alimentação
+58: Edição e edição<br>integrada à<br>impressão
+59: Atividades<br>cinematográficas,<br>produção de<br>vídeos...
+60: Atividades de<br>rádio e de<br>televisão
+61: Telecomunicações
+62: Atividades dos<br>serviços de<br>tecnologia da<br>informação
+63: Atividades de<br>prestação de<br>serviços de<br>informação
+64: Atividades de<br>serviços<br>financeiros
+65: Seguros,<br>resseguros,<br>previdência<br>complementar...
+66: Atividades<br>auxiliares dos<br>serviços<br>financeiros,...
+68: Atividades<br>imobiliárias
+69: Atividades<br>jurídicas, de<br>contabilidade e<br>de...
+70: Atividades de<br>sedes de empresas<br>e de consultoria<br>em...
+71: Serviços de<br>arquitetura e<br>engenharia;<br>testes...
+72: Pesquisa e<br>desenvolvimento<br>científico
+73: Publicidade e<br>pesquisa de<br>mercado
+74: Outras atividades<br>profissionais,<br>científicas e<br>técnicas,
+75: Atividades<br>veterinárias
+77: Aluguéis não<br>imobiliários e<br>gestão de ativos<br>intangíveis...
+78: Seleção,<br>agenciamento e<br>locação de mão<br>de...
+79: Agências de<br>viagens,<br>operadores<br>turísticos...
+80: Atividades de<br>vigilância,<br>segurança e<br>investigação
+81: Serviços para<br>edifícios e<br>atividades<br>paisagísticas
+82: Serviços de<br>escritório, de<br>apoio<br>administrativo...
+84: Administração<br>pública, defesa e<br>seguridade social
+85: Educação
+86: Atividades de<br>atenção à saúde<br>humana
+87: Atividades de<br>atenção à saúde<br>humana integradas<br>com...
+88: Serviços de<br>assistência<br>social sem<br>alojamento
+90: Atividades<br>artísticas,<br>criativas e de<br>espetáculos
+91: Atividades<br>ligadas ao<br>patrimônio<br>cultural...
+92: Atividades de<br>exploração de<br>jogos de azar e<br>apostas
+93: Atividades<br>esportivas e de<br>recreação e lazer
+94: Atividades de<br>organizações<br>associativas
+95: Reparação e<br>manutenção de<br>equipamentos de<br>informática...
+96: Outras atividades<br>de serviços<br>pessoais
+97: Serviços<br>domésticos
+99: Organismos<br>internacionais e<br>outras<br>instituições...
