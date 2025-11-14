@@ -3,7 +3,7 @@ import streamlit as st
 from copy import deepcopy
 import requests
 import plotly.express as px
-import geopandas as gpd
+#import geopandas as gpd
 
 
 #Em desenvolvimento
@@ -17,7 +17,7 @@ populacoes_censo = {'Itajaí':264054, 'Balneário Camboriu':139155,'Blumenau':38
                     'Lages':164981}
 
 
-tamanho_icone_mapa = {'1-MEI':.25, '2-Simples exceto MEI':1, '3-Normal':2}
+
 
 CNAES_categorias_alt = {'Todos':['01', '02', '03', '05', '06', '07', '08', '09', '10', '11',
     '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',
@@ -58,7 +58,7 @@ def load_data():
                            '8183':'Lages'  }
   data['Município_nome'] = data['Município'].map(municipios_de_interesse)  
   data_tree_map = deepcopy(data[(data['Município_nome']=='Itajaí') & (data['Situação_Cadastral']=='02') & (data['CNAE_principal']!='8888888')])
-  geodata = gpd.read_parquet('Arquivos/data_Itajai_ativas_georef.parquet')
+  geodata = pd.read_parquet('Arquivos/data_Itajai_ativas_georef.parquet_simplificado')
   
   Cnae_pai = pd.read_csv('Arquivos/CNAE_grupo.txt', dtype = str, sep = ':', )
   Cnae_pai.set_index('Cnae', inplace=True)
@@ -157,9 +157,7 @@ with st.container(border=True):
   geodata['Cnae_pai'] = geodata['CNAE_principal'].str[:2]
   geodata_f_cnae = deepcopy(geodata[(geodata['Cnae_pai'].isin(CNAES_categorias_alt[Cnaes_selecionados]))].reset_index())
   
-  geodata_f_cnae.insert(0,column='Longitude', value= geodata_f_cnae.get_coordinates()['x'])
-  geodata_f_cnae.insert(0,column='Latitude', value= geodata_f_cnae.get_coordinates()['y'])
-  geodata_f_cnae['size'] = geodata_f_cnae['Tipo'].map(tamanho_icone_mapa)
+
 
 
   fig2C = px.scatter_map(geodata_f_cnae, lat="Latitude", lon="Longitude", zoom=13, center= {'lat':-26.91, 'lon':-48.67},
