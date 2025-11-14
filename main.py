@@ -1,9 +1,8 @@
 import pandas as pd
 import streamlit as st
 from copy import deepcopy
-import requests
 import plotly.express as px
-#import geopandas as gpd
+
 
 
 #Em desenvolvimento
@@ -186,5 +185,6 @@ with st.container(border=True):
   #data_tree_map['CNAE_divisao'] = data_tree_map['CNAE_principal'].str[:2]
   #data_tree_map['Cnae_detalhado'] = data_tree_map['CNAE_principal'].str[:2]
   #Cnae_pai
+
 
 
