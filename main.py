@@ -15,13 +15,48 @@ data_atualizacao = 'outubro-2025'
 populacoes_censo = {'Itajaí':264054, 'Balneário Camboriu':139155,'Blumenau':385558, 'Brusque':141385, 'Navegantes':86401, 'Joinville':616317,
                     'Florianópolis':537211, 'São José':270299, 'Chapecó':254785, 'Palhoça':222598, 'Criciúma':214493, 'Jaraguá do Sul':182660,
                     'Lages':164981}
+
+
+tamanho_icone_mapa = {'1-MEI':.25, '2-Simples exceto MEI':1, '3-Normal':2}
+
+CNAES_categorias_alt = {'Todos':['01', '02', '03', '05', '06', '07', '08', '09', '10', '11',
+    '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',
+    '22', '23', '24', '25', '26', '27', '28', '29', '30', '31',
+    '32', '33', '35', '36', '37', '38', '39', '41', '42', '43',
+    '45', '46', '47', '49', '50', '51', '52', '53', '55', '56',
+    '58', '59', '60', '61', '62', '63', '64', '65', '66', '68',
+    '69', '70', '71', '72', '73', '74', '75', '77', '78', '79',
+    '80', '81', '82', '84', '85', '86', '87', '88', '90', '91',
+    '92', '93', '94', '95', '96', '97', '99'],
+ 'Agropecuária e Ind. Extrativas':['01','02', '03', '05', '06', '07', '08', '09'],
+ 'Telecomunicações, Energia, Saneamento e Resíduos':['35','36','37','38','39', '61'],
+ 'Industrias de Transformação': ['10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32'],
+ 'Construção':['41','42', '43'],
+ 'Comércio e manutenção de veículos': ['45'],
+ 'Alimentação, e Serviços Pessoais e Comércio Varejista':['56','47', '96'],
+ 'Logística e Com. Atacadista':['46','49','50','51','52','53'],
+ 'Manutenção - máquinas, objetos e eq. informática':['95', '33',],
+ 'Administração Pública, Organizações Associativas e Organismos Internacionais':['94','84','99'],
+ 'Educação e Pesquisa':['72', '85'],
+'Serviços de Tecnologia da Informação': ['62'],
+'Saúde e Serviços Sociais':['86', '87', '88'],
+'Atividades Financeiras, Seguros e Afins': ['63', '65', '66'],
+'Artes, Cultura e Esportes, Hospedagem, Viagens e Turismo ':['90','91','92','93','55','79'],
+'Serviços para Edifícios, Paisagismo, Vigilância, Segurança e Domésticos':['80', '81', '97'],
+'Serviços Locação/Agenciamento de Mão-de-Obra, de Escritório, de Apoio Administrativo e afins': [ '82','78'],
+'Mídia Audiovisual e Impressa; Serviços de informação':['58, 59', '60', '63'],
+'Publicidade e Promoção de Vendas': ['73'],
+'Consultoria, Contabilidade e Direito e afins': ['69', '70'],
+'Engenharia, Arquitetura, Design, Veterinária, Testes e Análises Técnicas, Fotografia e Afins': ['71', '74', '75'],
+'Imobiliárias, Aluguéis e Gestão de Intangíveis Não-Financeiros':['68','77']}
+
 @st.cache_data
 def load_data():
   data = pd.read_parquet('Arquivos/data_cr.parquet')
   municipios_de_interesse = {'8161':'Itajaí', '8039':'Balneário Camboriu','8047':'Blumenau', '8055':'Brusque', '8221':'Navegantes', '8179':'Joinville',
                            '8105':'Florianópolis', '8327':'São José', '8081':'Chapecó', '8233':'Palhoça', '8089':'Criciúma', '8175':'Jaraguá do Sul',
                            '8183':'Lages'  }
-  data['Município_nome'] = data['Município'].map(municipios_de_interesse)
+  data['Município_nome'] = data['Município'].map(municipios_de_interesse)  
   data_tree_map = deepcopy(data[(data['Município_nome']=='Itajaí') & (data['Situação_Cadastral']=='02') & (data['CNAE_principal']!='8888888')])
   geodata = gpd.read_parquet('Arquivos/data_Itajai_ativas_georef.parquet')
   
@@ -84,11 +119,11 @@ with st.container(border=True):
   with col2B:
     data['Cnae_pai'] = data['CNAE_principal'].str[:2]
     options_cnaes = data['Cnae_pai'].unique()
-    Cnaes_selecionados = st.multiselect('Selecione o(s) Cnae(s)', options = options_cnaes ,  default = ['46', '49','50','51','52','53'],                                    
+    Cnaes_selecionados = st.selectbox('Selecione o(s) Cnae(s)', options = CNAES_categorias_alt.keys() ,                                      
                                       width="stretch")
  
-  
-  data_f_CNAE = deepcopy(data[(data['Cnae_pai'].isin(Cnaes_selecionados))].reset_index())
+  #CNAES_categorias_alt[Cnaes_selecionados]
+  data_f_CNAE = deepcopy(data[(data['Cnae_pai'].isin(CNAES_categorias_alt[Cnaes_selecionados]))].reset_index())
 
 
   CNPJ_ativos = pd.pivot_table(data =data_f_CNAE[data_f_CNAE['Situação_Cadastral']=='02'], index = ['Município_nome', 'Tipo'],
@@ -120,15 +155,15 @@ with st.container(border=True):
   st.plotly_chart(fig2B,use_container_width=True, )
 
   geodata['Cnae_pai'] = geodata['CNAE_principal'].str[:2]
-  geodata_f_cnae = deepcopy(geodata[(geodata['Cnae_pai'].isin(Cnaes_selecionados))].reset_index())
+  geodata_f_cnae = deepcopy(geodata[(geodata['Cnae_pai'].isin(CNAES_categorias_alt[Cnaes_selecionados]))].reset_index())
   
   geodata_f_cnae.insert(0,column='Longitude', value= geodata_f_cnae.get_coordinates()['x'])
   geodata_f_cnae.insert(0,column='Latitude', value= geodata_f_cnae.get_coordinates()['y'])
-  geodata_f_cnae['dummy_size'] = 3
+  geodata_f_cnae['size'] = geodata_f_cnae['Tipo'].map(tamanho_icone_mapa)
 
 
   fig2C = px.scatter_map(geodata_f_cnae, lat="Latitude", lon="Longitude", zoom=13, center= {'lat':-26.91, 'lon':-48.67},
-                     map_style ='streets', color = 'Cnae_pai', height = 800, hover_data  = 'CNPJ', size = 'dummy_size')
+                     map_style ='streets', color = 'Cnae_pai', height = 800, hover_data  = 'CNPJ', size = 'size')
   fig2C.update_traces(cluster=dict(enabled=True))
   st.plotly_chart(fig2C,use_container_width=True, )
 
